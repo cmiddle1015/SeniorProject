@@ -218,43 +218,6 @@ void moveForward()
     analogWrite(enB, 1000);
 }
 
-/*
-//bool to tell system when Fred is close to a wall
-//checks continuously with lidar (at baude rate)
-//Executes some protocol when this happens, keeps track of how many walls Fred has encoutered
-bool checkIsAtWall()
-{
-  // Clears the trigPin
-  digitalWrite(trigPin, LOW);
-  delayMicroseconds(2);
-  // Sets the trigPin on HIGH state for 10 micro seconds
-  digitalWrite(trigPin, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(trigPin, LOW);
-  // Reads the echoPin, returns the sound wave travel time in microseconds
-  duration = pulseIn(echoPin, HIGH);
-  // Calculating the distance
-  distance = duration * 0.034 / 2;
-  // Prints the distance on the Serial Monitor
-  Serial.print("Distance: ");
-  Serial.println(distance);
-  //distance needs to be <= 5 to work
-  if(distance <= 7) //is x distance from wall (test this number), then activate some protocol
-  {
-    //leftTurnAction();
-    return true;
-    leftTurnAction();
-  }
-  else
-  {
-    return false;
-    moveForward();
-  }
-}
-*/
-
-
-
 //stop motors
 void fredStop()
 {
